@@ -1,0 +1,454 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2021-05-12 20:53:47",
+    "containerVersion": {
+        "path": "accounts/6003890366/containers/45100185/versions/4",
+        "accountId": "6003890366",
+        "containerId": "45100185",
+        "containerVersionId": "4",
+        "name": "1.2",
+        "description": "Removed old Google Analytics Tags, just focused on Google Analytics 4",
+        "container": {
+            "path": "accounts/6003890366/containers/45100185",
+            "accountId": "6003890366",
+            "containerId": "45100185",
+            "name": "SSA Custom Events - Sandbox",
+            "publicId": "GTM-MCNHJGH",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1620832334679",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6003890366/containers/45100185/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "tagId": "12",
+                "name": "GA4 Tag",
+                "type": "gaawc",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendPageView",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementId",
+                        "value": "G-4T0K6FWT1Q"
+                    }
+                ],
+                "fingerprint": "1620748472871",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "tagId": "15",
+                "name": "SSA Tags - GA4",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "appointmentType"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{appointmentType Variable}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{currency Variable}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "conversionValue"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{conversionValue Variable}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 Tag"
+                    }
+                ],
+                "fingerprint": "1620852004860",
+                "firingTriggerId": [
+                    "4",
+                    "6",
+                    "7",
+                    "5",
+                    "9",
+                    "10",
+                    "8",
+                    "11"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "4",
+                "name": "typeSelected Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "typeSelected"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748219223"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "5",
+                "name": "dateSelected Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "dateSelected"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748230898"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "6",
+                "name": "timeSelected Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "timeSelected"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748241703"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "7",
+                "name": "paymentInitiated Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "paymentInitiated"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748254267"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "8",
+                "name": "bookingCompleted Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "bookingCompleted"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748266045"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "9",
+                "name": "bookingRescheduled Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "bookingRescheduled"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748281601"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "10",
+                "name": "bookingEdited Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "bookingEdited"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748304281"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "triggerId": "11",
+                "name": "bookingCanceled Trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "bookingCanceled"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1620748317288"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "variableId": "22",
+                "name": "appointmentType Variable",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "appointmentType"
+                    }
+                ],
+                "fingerprint": "1620750260274",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "variableId": "25",
+                "name": "conversionValue Variable",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "conversionValue"
+                    }
+                ],
+                "fingerprint": "1620851941040",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "variableId": "26",
+                "name": "currency Variable",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "currency"
+                    }
+                ],
+                "fingerprint": "1620851955894",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6003890366",
+                "containerId": "45100185",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1620852803612",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003890366/containers/45100185/versions/4?apiLink=version"
+    }
+}
